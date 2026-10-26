@@ -15,10 +15,10 @@
        
 
 
-        function playNote1(someContext, frequency1, dur1)
+        function playNote1(someContext1, frequency1, dur1)
         {
-            const osc1 = new OscillatorNode(someContext);
-            const osc2 = new OscillatorNode(someContext);
+            const osc1 = new OscillatorNode(someContext1);
+            const osc2 = new OscillatorNode(someContext1);
             const gain1 = new GainNode(someContext1);
         
             
@@ -28,8 +28,8 @@
             osc2.type = "triangle"
             gain1.gain.value = 0;
 
-            osc1.connect(gain1).connect(someContext.destination);
-            osc2.connect(gain1).connect(someContext.destination);
+            osc1.connect(gain1).connect(someContext1.destination);
+            osc2.connect(gain1).connect(someContext1.destination);
 
             let now = someContext.currentTime;
 
